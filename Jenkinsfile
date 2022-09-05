@@ -11,10 +11,10 @@ pipeline {
    
   stages { 
 
-    stage('Install Dependencies') {
+    stage('Unit Test') {
         steps {
             sh 'npm install --package-lock-only'
-
+            sh 'npm test'
         }
     }
 
