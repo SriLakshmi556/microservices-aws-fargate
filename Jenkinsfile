@@ -3,7 +3,7 @@ pipeline {
     environment {
     AWS_ACCOUNT_ID="399348531980"
     AWS_DEFAULT_REGION="us-east-1"
-	registryCredential = "sree"
+    registryCredential = "sree"
     }
    
     stages {
@@ -12,7 +12,7 @@ pipeline {
     stage('Build and Push images to ECR') {
       steps{
         script {
-	        sh './start.sh build'
+	  sh './start.sh build'
           sh './start.sh push'
         }
       }
