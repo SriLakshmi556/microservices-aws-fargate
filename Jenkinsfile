@@ -8,13 +8,12 @@ pipeline {
    
     stages {
      
-    // Tests
-    stage('Unit Tests') {
+    // Install NPM
+    stage('NPM Install') {
       steps{
         script {
-          sh 'sudo yum install -y gcc-c++ make'
-	  sh 'curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -'
-	  sh 'sudo yum install -y nodejs'
+          sh 'npm install'
+          sh 'npm test -- --watchAll=false'
         }
       }
     }
