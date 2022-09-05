@@ -11,7 +11,7 @@ Parameters:
     Description: Service name
   ImageUrl:
     Type: String
-    Default: 708464146667.dkr.ecr.ap-southeast-2.amazonaws.com/msdemo/customerservice:latest
+    Default: 399348531980.dkr.ecr.us-east-1.amazonaws.com/msdemo/customerservice:latest
     Description: The url of a docker image
   ContainerPort:
     Type: Number
