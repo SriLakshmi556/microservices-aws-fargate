@@ -3,7 +3,7 @@ Description: This template create a fargate cluster.
 Parameters: 
   EnvironmentName: 
     Type: String
-    Default: Demo1
+    Default: msdemo
     Description: Name of the environment.
 
     
