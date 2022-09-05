@@ -12,9 +12,9 @@ pipeline {
     stage('Unit Tests') {
       steps{
         script {
-          sh 'yum install -y gcc-c++ make'
+          sh 'sudo yum install -y gcc-c++ make'
 	  sh 'curl -sL https://rpm.nodesource.com/setup_18.x | sudo -E bash -'
-	  sh 'yum install -y nodejs'
+	  sh 'sudo yum install -y nodejs'
         }
       }
     }
