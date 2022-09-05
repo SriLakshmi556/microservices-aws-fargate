@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_REPO_URI=708464146667.dkr.ecr.ap-southeast-2.amazonaws.com/msdemo
+DOCKER_REPO_URI=399348531980.dkr.ecr.us-east-1.amazonaws.com/msdemo
 
 
 function build() {
