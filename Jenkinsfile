@@ -12,8 +12,8 @@ pipeline {
     stage('Build and Push images to ECR') {
       steps{
         script {
-	  sh './start.sh build'
-          sh './start.sh push'
+	  sh 'sudo ./start.sh build'
+          sh 'sudo ./start.sh push'
         }
       }
     }
