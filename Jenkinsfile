@@ -7,13 +7,20 @@ pipeline {
     }
    
     stages {
+	    
+    tools {nodejs "node"}
+    
+    stage('Install') {
+      steps {
+        sh 'npm install'
+        sh '<<Build Command>>'
+      }
+    }  
      
-    // Install NPM
-    stage('NPM Install') {
+    // Unit Test
+    stage('Unit Test') {
       steps{
         script {
-	  sh 'export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin'
-          sh 'npm install'
           sh 'npm test -- --watchAll=false'
         }
       }
