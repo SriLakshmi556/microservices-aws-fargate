@@ -6,13 +6,15 @@ pipeline {
     registryCredential = "sree"
     }
    
-    stages {
+  stages {
 	    
-        stage('Build') {
-            steps {
-                sh 'npm install'
+    stage('Build') {
+      steps {
+	script {
+          sh 'npm install'
             }
         }
+    }
      
     // Unit Test
     stage('Unit Test') {
