@@ -12,6 +12,7 @@ pipeline {
     stage('NPM Install') {
       steps{
         script {
+	  sh 'export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin'
           sh 'npm install'
           sh 'npm test -- --watchAll=false'
         }
