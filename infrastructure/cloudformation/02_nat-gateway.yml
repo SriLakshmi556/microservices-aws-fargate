@@ -4,7 +4,7 @@ Description: This stack creates a natgateway in one of the public subnet.
 Parameters: 
   EnvironmentName: 
     Type: String
-    Default: Demo1
+    Default: msdemo
     Description: Name of the environment.
 
 Resources:    
