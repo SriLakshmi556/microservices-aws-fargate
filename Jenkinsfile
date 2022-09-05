@@ -8,14 +8,11 @@ pipeline {
    
     stages {
 	    
-    tools {nodejs "node"}
-    
-    stage('Install') {
-      steps {
-        sh 'npm install'
-        sh '<<Build Command>>'
-      }
-    }  
+        stage('Build') {
+            steps {
+                sh 'npm install'
+            }
+        }
      
     // Unit Test
     stage('Unit Test') {
