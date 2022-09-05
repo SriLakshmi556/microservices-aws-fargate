@@ -11,12 +11,11 @@ pipeline {
     stage('Build') {
       steps {
 	script {
-          nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
-          sh 'npm config ls'
+          sh 'npm install'
             }
         }
     }
-    }
+
      
     // Unit Test
     stage('Unit Test') {
