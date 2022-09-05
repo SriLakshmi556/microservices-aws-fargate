@@ -19,7 +19,7 @@ function build() {
 
 function push() {
     echo "Push images"
-    $(aws ecr get-login --no-include-email --region ap-southeast-2)
+    $(aws ecr get-login --no-include-email --region us-east-1)
 
     docker tag msdemo/customerservice:latest $DOCKER_REPO_URI/customerservice:latest
     docker tag msdemo/orderservice:latest $DOCKER_REPO_URI/orderservice:latest
